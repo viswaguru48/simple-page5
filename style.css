@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color:rgba(0, 0, 87, 0.979) ;
+    background-image: url(images/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color:rgba(56, 136, 228, 0.301);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navlinks{
+    list-style-type: none;
+    display: flex;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+.navlinks li{
+    padding: 26px 10px;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 26px 20px;
+
+}
+
+.navlinks li a:hover{
+    border: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.menu i, #checkbtn{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    margin-right: 25px;
+    padding: 5px;
+    border-radius: 3px;
+    display: none;
+}
+
+p{
+    line-height: 30px;
+    text-indent: 100px;
+    text-align: justify;
+    margin: 60px;
+    color: white;
+}
+
+.last{
+    margin-bottom: 160px;
+}
+
+footer{
+    display: flex;
+    background-color: rgba(4, 90, 161, 0.212);
+    width: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+.copy{
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+address{
+    text-align: center;
+    color: white;
+}
+
+.icons{
+    display: grid;
+    margin-left: 25px;
+}
+.icons a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+}
+
+.icons i{
+    color: rgb(255, 95, 95);
+    margin: 5px;
+}
+
+@media screen and (max-width:600px) {
+
+    body{
+        background-image: url(images/background-home-mobile.jpg);
+    }
+
+    .navlinks{
+        flex-direction: column;
+        margin-top: 16px;
+        display: none;
+        
+    }
+
+    .navlinks li{
+        border-bottom: 2px solid black;
+        display: block;
+        text-align: center;
+        background: rgb(0, 87, 128);
+        width: 104vw;
+    }
+
+    .logo{
+        align-self: flex-start;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .menu i{
+        display: block;
+        cursor: pointer;
+    }
+
+    #checkbtn:checked~ .navlinks{
+        display: block;
+    }
+
+}
